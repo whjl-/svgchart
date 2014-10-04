@@ -18,13 +18,13 @@ $(document).ready(function(){
 
     // 'lcols' is an array. It is only used on dotChart. It is the colo(u)rs of the lines. Note: there must be ONE LESS amount of colo(u)rs in 'lcols' then values in 'vals'  
     var lcols = ["pink","red"];
+    var font = "MyriadPro-Regular";
 
-
-    // barChart takes three parameters (values of points/bars, colo(u)rs of points/bars and the id (#) of the element to apply the SVG inside)
-    barChart(vals,cols,"chart1");
+    // barChart takes three parameters (values of points/bars, colo(u)rs of points/bars, the id (#) of the element to apply the SVG inside and the font (for labels; this is optional))
+    barChart(vals,cols,"chart1",font);
     
-    // in addition to the parameters barChart takes dotChart can also have two additional parameters; they are: (to/not to display lines connection points (true/false) and an array of the colo(u)rs of the lines). 
-    dotChart(vals,cols,"chart2",true,lcols);
+    // in addition to the parameters barChart takes dotChart can also have two optional additional parameters; they are: (to/not to display lines connection points (true/false) and an array of the colo(u)rs of the lines). 
+    dotChart(vals,cols,"chart2",font,true,lcols);
 
 
 });

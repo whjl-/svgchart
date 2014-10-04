@@ -2,7 +2,8 @@
 
 
 //Takes values array then colo(u)rs array (MUST BE THE SAME LENGTH AS values) and id of element to apply
-function barChart(bars,cols,id){
+function barChart(bars,cols,id,font){
+    if(typeof font === 'undefined'){ font = "MyriadPro-Regular"; }
     var height = 175;
     var maxv = Math.max.apply(Math, bars);
     var rat = height/maxv;
@@ -15,14 +16,16 @@ function barChart(bars,cols,id){
         $("#"+id).find("#bars").html(currentb+'<rect x="'+x+'" y="31.841" fill="'+col+'" stroke="#FFFFFF" stroke-miterlimit="10" width="30" height="'+barh+'"/>');
         var currentl = $("#"+id).find("#labels").html();
         var labx = x+5;
-        $("#"+id).find("#labels").html(currentl+'<text transform="matrix(1 0 0 1 '+labx+' 27)" font-family="MyriadPro-Regular" font-size="12">'+item+'</text>');
+        $("#"+id).find("#labels").html(currentl+'<text transform="matrix(1 0 0 1 '+labx+' 27)" font-family="'+font+'" font-size="12">'+item+'</text>');
     });
 }
 
 //Takes values array then colo(u)rs array (MUST BE THE SAME LENGTH AS values) and id of element to apply
-function dotChart(bars,cols,id,line,lcols){
+function dotChart(bars,cols,id,font,line,lcols){
     if(typeof line === 'undefined'){ line = false; }
     if(typeof lcols === 'undefined'){ lcols = false; }
+    if(typeof font === 'undefined'){ font = "MyriadPro-Regular"; }
+    
     var height = 190;
     var maxv = Math.max.apply(Math, bars);
     var rat = height/maxv;
@@ -40,7 +43,7 @@ function dotChart(bars,cols,id,line,lcols){
         
         var currentv = $("#"+id).find("#values").html();
         var v1 = (36*(index+1))+24;
-        $("#"+id).find("#values").html(currentv+'<text transform="matrix(1 0 0 1 '+v1+' 27)" font-family="MyriadPro-Regular" font-size="12">'+item+'</text>');
+        $("#"+id).find("#values").html(currentv+'<text transform="matrix(1 0 0 1 '+v1+' 27)" font-family="'+font+'" font-size="12">'+item+'</text>');
         
         if(line == true){
             if(index > 0){
