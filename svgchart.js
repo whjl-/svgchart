@@ -1,4 +1,4 @@
-/* Copyright (c) William Langford 2014. This work is licensed under a Creative Commons Attribution 4.0 International License and may not be sold.*/
+// Copyright (c) William Langford 2014. This work is licensed under a Creative Commons Attribution 4.0 International License and may not be sold.*/
 
 
 //Takes values array then colo(u)rs array (MUST BE THE SAME LENGTH AS values) and id of element to apply
