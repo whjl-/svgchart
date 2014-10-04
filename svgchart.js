@@ -20,7 +20,9 @@ function barChart(bars,cols,id){
 }
 
 //Takes values array then colo(u)rs array (MUST BE THE SAME LENGTH AS values) and id of element to apply
-function dotChart(bars,cols,id){
+function dotChart(bars,cols,id,line,lcols){
+    if(typeof line === 'undefined'){ line = false; }
+    if(typeof lcols === 'undefined'){ lcols = false; }
     var height = 190;
     var maxv = Math.max.apply(Math, bars);
     var rat = height/maxv;
@@ -39,5 +41,24 @@ function dotChart(bars,cols,id){
         var currentv = $("#"+id).find("#values").html();
         var v1 = (36*(index+1))+24;
         $("#"+id).find("#values").html(currentv+'<text transform="matrix(1 0 0 1 '+v1+' 27)" font-family="MyriadPro-Regular" font-size="12">'+item+'</text>');
+        
+        if(line == true){
+            if(index > 0){
+                var currentc2 = $("#"+id).find("#crosses").html();
+                var barhl = (bars[index-1])*rat;
+                var x1l = (36*index)+35;
+                var y1l = barhl+5;
+                var x2n = x2-5;
+                var y2n = y2-5;
+                if(lcols == false){
+                    var lcol = col;
+                }else{
+                    var lcol = lcols[index-1];
+                }
+                $("#"+id).find("#crosses").html(currentc2+'<line fill="none" stroke="'+lcol+'" stroke-miterlimit="10" x1="'+x1l+'" y1="'+y1l+'" x2="'+x2n+'" y2="'+y2n+'"/>');
+            }            
+        }
+        
     });
+    
 }
