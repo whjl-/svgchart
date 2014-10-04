@@ -1,0 +1,18 @@
+<html>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/whjl-/svgchart/master/svgchart.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var vals = ["10","25","100"];
+    var cols = ["#27AAE1","green","#27AAE1"];
+    // Note: there must be the same amount of colo(u)rs as values
+
+    barChart(vals,cols,"chart1");
+    dotChart(vals,cols,"chart2");
+
+
+});
+</script>
+<div id="chart1" style="width:20%;"></div>
+<div id="chart2" style="width:20%;"></div>
+</html>
