@@ -24,7 +24,7 @@ $(document).ready(function(){
     barChart(vals,cols,"chart1");
     
     // in addition to the parameters barChart takes dotChart can also have two additional parameters; they are: (to/not to display lines connection points (true/false) and an array of the colo(u)rs of the lines). 
-    dotChart(vals,cols,"chart2");
+    dotChart(vals,cols,"chart2",true,lcols);
 
 
 });
