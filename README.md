@@ -39,4 +39,4 @@ $(document).ready(function(){
 <div id="chart1" style="width:20%;"></div>
 <div id="chart2" style="width:20%;"></div>
 ```
-![SVGChart Example](example-img/svgchart.png)
+<img alt="SVGChart Example" src="example-img/svgchart.png" style="width:20%;"/>
