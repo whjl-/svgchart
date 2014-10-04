@@ -25,7 +25,14 @@ $(document).ready(function(){
     
     // in addition to the parameters barChart takes dotChart can also have two optional additional parameters; they are: (to/not to display lines connection points (true/false) and an array of the colo(u)rs of the lines). 
     dotChart(vals,cols,"chart2",font,true,lcols);
+	
 
+
+    // This seperate function produces a key.
+	var labels = ["Jeremy","Apple time","qwerty","uiopasdf","calculator"];
+
+    // You may provide it with the same 'vals' and 'cols' arrays as the charts. Though, you will need to produce another array (of the same length) labels or names. Give it a serparate div id. 
+    keyChart(vals,cols,labels,"chartKey1");
 
 });
 </script>

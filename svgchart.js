@@ -65,3 +65,17 @@ function dotChart(bars,cols,id,font,line,lcols){
     });
     
 }
+
+// This produces a key. You may provide it with the same 'vals' and 'cols' arrays as the charts. Though, you will need to produce another array (of the same length) labels or names. Give it a serparate div id.
+function keyChart(vals,cols,labels,id){
+    $("#"+id).html('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><text transform="matrix(1 0 0 1 21.4932 31.8198)" font-family="MyriadPro-Regular" font-size="30">Key</text><g id="keys"></g></svg>');
+    jQuery.each(vals, function(index, item){
+        var currentb = $("#"+id).find("#keys").html();
+        var col = cols[index];
+        var y = (25*(index+1))+25;
+        var y2 = y+10;
+        var label = labels[index];
+        var value = vals[index];
+        $("#"+id).find("#keys").html(currentb+'<text transform="matrix(1 0 0 1 22.5 '+y2+')" font-family="MyriadPro-Regular" font-size="15">'+label+'   ('+value+')</text><rect x="165" y="'+y+'" fill="'+col+'" width="59.719" height="12.188"/>');
+    });
+}
