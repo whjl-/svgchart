@@ -3,7 +3,7 @@
 
 //Takes values array then colo(u)rs array (MUST BE THE SAME LENGTH AS values) and id of element to apply
 function barChart(bars,cols,id,font){
-    if(typeof font === 'undefined'){ font = "MyriadPro-Regular"; }
+    if(typeof font === 'undefined' || font == false){ font = "MyriadPro-Regular"; }
     var height = 175;
     var maxv = Math.max.apply(Math, bars);
     var rat = height/maxv;
@@ -24,7 +24,7 @@ function barChart(bars,cols,id,font){
 function dotChart(bars,cols,id,font,line,lcols){
     if(typeof line === 'undefined'){ line = false; }
     if(typeof lcols === 'undefined'){ lcols = false; }
-    if(typeof font === 'undefined'){ font = "MyriadPro-Regular"; }
+    if(typeof font === 'undefined' || font == false){ font = "MyriadPro-Regular"; }
     
     var height = 190;
     var maxv = Math.max.apply(Math, bars);

@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     // 'lcols' is an array. It is only used on dotChart. It is the colo(u)rs of the lines. Note: there must be ONE LESS amount of colo(u)rs in 'lcols' then values in 'vals'  
     var lcols = ["pink","red"];
-    var font = "MyriadPro-Regular";
+    var font = "MyriadPro-Regular"; // MyriadPro-Regular is the default font
 
     // barChart takes three required parameters and one optional (values of points/bars, colo(u)rs of points/bars, the id (#) of the element to apply the SVG inside and the font (for labels; this is optional))
     barChart(vals,cols,"chart1",font);
