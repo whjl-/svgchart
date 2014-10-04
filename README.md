@@ -6,7 +6,7 @@ First link in the jQuery:<br>
 Then svgchart.min.js:<br>
 `<script type="text/javascript" src="https://raw.githubusercontent.com/whjl-/svgchart/master/svgchart.min.js"></script>`<br>
 <br>
-<code><script type="text/javascript">
+`<script type="text/javascript">
 $(document).ready(function(){
 	var vals = ["10","25","100"];
     var cols = ["#27AAE1","green","#27AAE1"];
@@ -20,4 +20,4 @@ $(document).ready(function(){
 </script>
 <div id="chart1" style="width:20%;"></div>
 <div id="chart2" style="width:20%;"></div>
-</code>
+`
