@@ -20,7 +20,7 @@ $(document).ready(function(){
     var lcols = ["pink","red"];
     var font = "MyriadPro-Regular";
 
-    // barChart takes three parameters (values of points/bars, colo(u)rs of points/bars, the id (#) of the element to apply the SVG inside and the font (for labels; this is optional))
+    // barChart takes three required parameters and one optional (values of points/bars, colo(u)rs of points/bars, the id (#) of the element to apply the SVG inside and the font (for labels; this is optional))
     barChart(vals,cols,"chart1",font);
     
     // in addition to the parameters barChart takes dotChart can also have two optional additional parameters; they are: (to/not to display lines connection points (true/false) and an array of the colo(u)rs of the lines). 
