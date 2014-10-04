@@ -4,7 +4,7 @@ svgchart
 First link in the jQuery:<br>
 `<script type="text/javascript" src="/link/to/jquery.js"></script>`<br>
 Then svgchart.min.js:<br>
-`<script type="text/javascript" src="https://raw.githubusercontent.com/whjl-/svgchart/master/svgchart.min.js"></script>`<br>
+`<script type="text/javascript" src="svgchart.min.js"></script>`<br>
 <br>
 ```
 <script type="text/javascript">
